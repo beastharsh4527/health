@@ -19,13 +19,13 @@ function Card({ s }: { s: (typeof services)[number] }) {
       href={`/services/${s.slug}`}
       className="svc-card group relative flex h-[25rem] w-[min(84vw,23rem)] shrink-0 flex-col justify-between overflow-hidden rounded-3xl border border-ink/10 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg md:h-[28rem]"
     >
-      <div aria-hidden className="absolute inset-x-0 top-0 h-36 opacity-20 transition-opacity duration-500 group-hover:opacity-30">
-        <Image src={img(s.photo, 700)} alt="" fill sizes="23rem" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white" />
+      <div aria-hidden className="absolute inset-x-0 top-0 h-40 overflow-hidden">
+        <Image src={img(s.photo, 900)} alt="" fill sizes="23rem" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white" />
       </div>
       <div className="relative flex items-start justify-between">
-        <span className="font-mono text-sm text-brand">{s.n}</span>
-        <span className="grid h-11 w-11 place-items-center rounded-full border border-ink/15 text-ink/70 transition-colors duration-500 group-hover:border-brand group-hover:text-brand">
+        <span className="rounded-full bg-white/85 px-2.5 py-1 font-mono text-sm text-brand backdrop-blur-sm">{s.n}</span>
+        <span className="grid h-11 w-11 place-items-center rounded-full border border-ink/10 bg-white/85 text-ink/70 backdrop-blur-sm transition-colors duration-500 group-hover:border-brand group-hover:text-brand">
           <ArrowUpRight className="h-4 w-4" aria-hidden />
         </span>
       </div>
