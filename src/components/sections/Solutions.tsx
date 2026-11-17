@@ -97,7 +97,7 @@ function Panel({ s, id }: { s: (typeof solutions)[number]; id?: string }) {
         </div>
       </div>
       <div className="relative min-h-[18rem] overflow-hidden rounded-3xl">
-        <Image src={img(s.photo, 1000)} alt="" fill sizes="(min-width:1024px) 40vw, 90vw" className="object-cover" />
+        <Image src={img(s.photo, 1000)} alt="" fill sizes="(min-width:1024px) 40vw, 90vw" className="object-cover object-[50%_18%]" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/35 to-transparent" />
         <span className="absolute bottom-5 left-5 chip border-white/40 bg-ink/40 text-paper backdrop-blur">{s.tab}</span>
       </div>
